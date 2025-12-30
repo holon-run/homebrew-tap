@@ -6,7 +6,7 @@ class Holon < Formula
   homepage "https://github.com/holon-run/holon"
   license "MIT"
 
-  version "0.6.0"
+  version "0.7.0"
 
   # Auto-update configuration
   livecheck do
@@ -16,15 +16,15 @@ class Holon < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/holon-run/holon/releases/download/v0.6.0/holon-darwin-amd64.tar.gz"
-      sha256 "d094e5b2a76025472eabc2c8f59ab3adf04f75dcbef5c876cfe1c1a1cb7f93cc"
+      url "https://github.com/holon-run/holon/releases/download/v0.7.0/holon-darwin-amd64.tar.gz"
+      sha256 "d27d156160ff316c70b82d987243ec3e13e967ea6cad9bafe5777b57eb0b1f99"
 
       def install
         bin.install "holon"
       end
     else
-      url "https://github.com/holon-run/holon/releases/download/v0.6.0/holon-darwin-arm64.tar.gz"
-      sha256 "db50d172fa1db517d573f82bb91abc7abd7d49596f87df465ea575e2b79309d9"
+      url "https://github.com/holon-run/holon/releases/download/v0.7.0/holon-darwin-arm64.tar.gz"
+      sha256 "a2646a7ae931d3d271215039b39e7ac5b3387117db3c109f7a82555beb836073"
 
       def install
         bin.install "holon"
@@ -34,8 +34,8 @@ class Holon < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/holon-run/holon/releases/download/v0.6.0/holon-linux-amd64.tar.gz"
-      sha256 "2b9416856afa1d7ecae8c40777f904ed887d685b1ad0cf84f63452554402b83b"
+      url "https://github.com/holon-run/holon/releases/download/v0.7.0/holon-linux-amd64.tar.gz"
+      sha256 "d284f1ce9be18fb09decd9d50998ac319fb084973d263a0d662ab56b4336d084"
 
       def install
         bin.install "holon"
