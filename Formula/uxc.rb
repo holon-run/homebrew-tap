@@ -2,23 +2,23 @@ class Uxc < Formula
   desc "Universal X-Protocol CLI"
   homepage "https://github.com/holon-run/uxc"
   license "MIT"
-  version "0.11.1"
+  version "0.12.0"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/holon-run/uxc/releases/download/v0.11.1/uxc-v0.11.1-aarch64-apple-darwin.tar.gz"
-      sha256 "a672f6bf09e7285276612f97dcc69236d8c083fbf9d403dfb17b3a4c01c948d0"
+      url "https://github.com/holon-run/uxc/releases/download/v0.12.0/uxc-v0.12.0-aarch64-apple-darwin.tar.gz"
+      sha256 "d083413c581f9cf12bee675cfd2fc3fc3a9f0bfbb8c11bdee026ed271ae9d9d7"
     else
-      url "https://github.com/holon-run/uxc/releases/download/v0.11.1/uxc-v0.11.1-x86_64-apple-darwin.tar.gz"
-      sha256 "99a45b0b82adefd8390656c2d8c3201e749a5010140f6e13d292f69786240cb3"
+      url "https://github.com/holon-run/uxc/releases/download/v0.12.0/uxc-v0.12.0-x86_64-apple-darwin.tar.gz"
+      sha256 "39091f35b706c7bd061d3ced776b444245f375d965112cf2a9623b3c401b9d59"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/holon-run/uxc/releases/download/v0.11.1/uxc-v0.11.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c09ad1ae0ec4da367f774ead38f2510b39b402e76f551c570bf02a8ada1865ae"
+      url "https://github.com/holon-run/uxc/releases/download/v0.12.0/uxc-v0.12.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "d305fa2989cd05839399f11b86feabd6851d307b652e11429a89145a8eeff4f0"
     else
-      url "https://github.com/holon-run/uxc/releases/download/v0.11.1/uxc-v0.11.1-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "91103036fe41dd48eb9676a26d91d6ca0fea94591edd55d3f9e1273e338f56cc"
+      url "https://github.com/holon-run/uxc/releases/download/v0.12.0/uxc-v0.12.0-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "1f836a5974045e1406259698243336c0bac00ec79177fdd4ff3cd92a42dd7cae"
     end
   end
 
