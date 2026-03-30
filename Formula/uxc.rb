@@ -7,18 +7,18 @@ class Uxc < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/holon-run/uxc/releases/download/v0.12.7/uxc-v0.12.7-aarch64-apple-darwin.tar.gz"
-      sha256 "5e6882274e701a700e61f087a7c2e881f5b4a503b9b217b9148d5174005b5121"
+      sha256 "2c9f84aaead42b37c7ef8b5ec2296e022a252de59f0c4e092f2800db4b991f46"
     else
       url "https://github.com/holon-run/uxc/releases/download/v0.12.7/uxc-v0.12.7-x86_64-apple-darwin.tar.gz"
-      sha256 "c1028c4d1399a884fc2e9fa994eb13ecbee4bbc445a53f7e4102bc0f153ee347"
+      sha256 "62d8008366b6f2ffb34305925cdc22aa692c72aa3759a900bc926d222e8273a4"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/holon-run/uxc/releases/download/v0.12.7/uxc-v0.12.7-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c181d9ec0068d735409383c37fce6d1a593f4afe7f7c1694e2250ba93c3437f2"
+      sha256 "dfcf086f9c590ba43a4d5581e035ccad7849f175848b1fdd5ad4ee3bf5f6e989"
     else
       url "https://github.com/holon-run/uxc/releases/download/v0.12.7/uxc-v0.12.7-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f97c6c9058a475d083945f4f16a36af6a524e625b1a20decfab834866f37df8b"
+      sha256 "c05b41c8b0561f018cc0ee551ffedab392ea9707a5b328728c5d9fba5e011a98"
     end
   end
 
