@@ -1,52 +1,33 @@
-# typed: strict
-# frozen_string_literal: true
-
 class Holon < Formula
-  desc "Standardized runner for AI-driven software engineering"
+  desc "Headless, event-driven runtime for long-lived agents"
   homepage "https://github.com/holon-run/holon"
-  license "MIT"
-
-  version "0.12.0"
-
-  # Auto-update configuration
-  livecheck do
-    url "https://github.com/holon-run/holon/releases/latest"
-    strategy :github_latest
-  end
+  version "0.13.0"
+  license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/holon-run/holon/releases/download/v0.12.0/holon-darwin-amd64.tar.gz"
-      sha256 "2328b100783e6f4ff39878b113b0e040b3b075e8cf515e729a369d5c14a56a4d"
-
-      def install
-        bin.install "holon"
-      end
+    if Hardware::CPU.arm?
+      url "https://github.com/holon-run/holon/releases/download/v0.13.0/holon-darwin-arm64.tar.gz"
+      sha256 "b74d3209e80fd38947c386187d6ab1d969f5aab2cfa78168800af1f6371997a7"
     else
-      url "https://github.com/holon-run/holon/releases/download/v0.12.0/holon-darwin-arm64.tar.gz"
-      sha256 "ae0f78e3896c70981cf2802ee538b17deeacfb5ce488d9a80c651832bc44093f"
-
-      def install
-        bin.install "holon"
-      end
+      url "https://github.com/holon-run/holon/releases/download/v0.13.0/holon-darwin-amd64.tar.gz"
+      sha256 "a4d314a69962ffdfa1971bb639de0ff850ff0df89b14a5f68ab0fbb30898edd9"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/holon-run/holon/releases/download/v0.12.0/holon-linux-amd64.tar.gz"
-      sha256 "f27f245606b861926b08c3075235413806593af38ce420c66af92add926a623d"
-
-      def install
-        bin.install "holon"
-      end
+      url "https://github.com/holon-run/holon/releases/download/v0.13.0/holon-linux-amd64.tar.gz"
+      sha256 "e25e2a53a24221dd246e1b954825da987356b0ca4c5abf2c5ecd969060a84055"
+    else
+      odie "Holon does not publish a Linux ARM64 binary yet"
     end
   end
 
+  def install
+    bin.install "holon"
+  end
+
   test do
-    version_output = shell_output("\#{bin}/holon version")
-    assert_match "holon version", version_output
-    assert_match "commit:", version_output
-    assert_match "built at:", version_output
+    assert_match "0.13.0", shell_output("#{bin}/holon --version")
   end
 end
