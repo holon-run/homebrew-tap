@@ -1,23 +1,23 @@
 class Holon < Formula
   desc "Headless, event-driven runtime for long-lived agents"
   homepage "https://github.com/holon-run/holon"
-  version "0.61.1"
+  version "0.62.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/holon-run/holon/releases/download/v0.61.1/holon-darwin-arm64.tar.gz"
-      sha256 "b08062cebdae97ccd600438451327976251733b910864071565ed02ba08c211a"
+      url "https://github.com/holon-run/holon/releases/download/v0.62.0/holon-darwin-arm64.tar.gz"
+      sha256 "8a6bd79a192d671307eb0ec96f9991790f47924da7e80421a196f2bc8cd0e9d2"
     else
-      url "https://github.com/holon-run/holon/releases/download/v0.61.1/holon-darwin-amd64.tar.gz"
-      sha256 "190a1d344f4da7701fb86592251f502ccfa8571a346ac2785ea50f1bc5792938"
+      url "https://github.com/holon-run/holon/releases/download/v0.62.0/holon-darwin-amd64.tar.gz"
+      sha256 "f608e34c9831bf93fcb26cec67ac135023da3ce1895c4d0bd494cfcd315d910f"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/holon-run/holon/releases/download/v0.61.1/holon-linux-amd64.tar.gz"
-      sha256 "7a77cda152b3e7acad5c7faaa540a147a4cf1c415d173f902167272eec9923af"
+      url "https://github.com/holon-run/holon/releases/download/v0.62.0/holon-linux-amd64.tar.gz"
+      sha256 "fac38ef8d20b9ad309add5bcc2d06983fa68e06715c619eeb2824f2612cab795"
     else
       odie "Holon does not publish a Linux ARM64 binary yet"
     end
@@ -28,6 +28,6 @@ class Holon < Formula
   end
 
   test do
-    assert_match "0.61.1", shell_output("#{bin}/holon --version")
+    assert_match "0.62.0", shell_output("#{bin}/holon --version")
   end
 end
